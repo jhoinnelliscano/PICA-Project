@@ -1,1 +1,1 @@
-# PICA-Project
+# PICA.eCommerce
