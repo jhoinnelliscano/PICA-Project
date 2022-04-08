@@ -50,5 +50,5 @@ jobs:
         shell: powershell
         run: |
           .\.sonar\scanner\dotnet-sonarscanner begin /k:"jhoinnelliscano_PICA-Project" /o:"jhoinnelliscano" /d:sonar.login="${{ secrets.SONAR_TOKEN }}" /d:sonar.host.url="https://sonarcloud.io" /d:sonar.scm.disabled=True
-          dotnet build "eCommerce.Blazor.Demo.sln"
+          dotnet build eCommerce.Blazor.Demo.sln
           .\.sonar\scanner\dotnet-sonarscanner end /d:sonar.login="${{ secrets.SONAR_TOKEN }}"
