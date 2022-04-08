@@ -68,6 +68,7 @@ namespace eCommerce.Services.Services
             var query = JsonConvert.DeserializeObject<Dictionary<string, string>>(json);
             var uri = QueryHelpers.AddQueryString(this.getUriBase(Metodo), query);
             return uri;
+            
         }
     }
 }
