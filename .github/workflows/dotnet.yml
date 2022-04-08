@@ -49,6 +49,6 @@ jobs:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         shell: powershell
         run: |
-          -Path .\.sonar\scanner\dotnet-sonarscanner begin /k:"jhoinnelliscano_PICA-Project" /o:"jhoinnelliscano" /d:sonar.login="${{ secrets.SONAR_TOKEN }}" /d:sonar.host.url="https://sonarcloud.io"
+          dotnet .\.sonar\scanner\dotnet-sonarscanner begin /k:"jhoinnelliscano_PICA-Project" /o:"jhoinnelliscano" /d:sonar.login="${{ secrets.SONAR_TOKEN }}" /d:sonar.host.url="https://sonarcloud.io"
           dotnet build eCommerce.Blazor.Demo.sln
-          -Path .\.sonar\scanner\dotnet-sonarscanner end /d:sonar.login="${{ secrets.SONAR_TOKEN }}"
+          dotnet .\.sonar\scanner\dotnet-sonarscanner end /d:sonar.login="${{ secrets.SONAR_TOKEN }}"
