@@ -41,8 +41,8 @@ jobs:
         uses: actions/setup-dotnet@v2
         with:
           dotnet-version: 6.0.x          
-    #  - name: Restore dependencies
-    #    run: dotnet restore
+      - name: Restore dependencies
+        run: dotnet restore eCommerce.Blazor.Demo.sln
       - name: Build and analyze
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Needed to get PR information, if any
