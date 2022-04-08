@@ -21,5 +21,3 @@ jobs:
       run: dotnet restore eCommerce.Blazor.Demo.sln
     - name: Build
       run: dotnet build eCommerce.Blazor.Demo.sln --no-restore
-    - name: Test
-      run: dotnet test --no-build --verbosity normal
